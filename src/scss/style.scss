@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Contrail+One');
 body {
     background-color: #fefefe;
   }
-  
+  #clock {
+    width: 600px;
+    height:100px;
+    background-color:black;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:green;
+    font-family: 'Times New Roman', Times, sans-seriff;
+    font-size: 3em;
+  }
+
   .navigation {
     display: none;
     &__link {
