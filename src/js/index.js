@@ -1,12 +1,19 @@
 import "../scss/style.scss";
-
+//MenuButton
 const menus = document.querySelector(".menu--js");
-const nav = document.querySelector(".navigation--js");
-
 menus.addEventListener("click", () => {
   nav.classList.toggle("navigation__open");
-  console.log("Klik");
 });
+
+const nav = document.querySelector(".navigation--js");
+//DarkButton
+const darkness = document.querySelector(".dark--js");
+const darkbut = document.body;
+darkness.addEventListener("click", () => {
+  darkbut.classList.toggle("dark__mode");
+});
+
+
 //Clock
 const clock = document.getElementById("clock");
 

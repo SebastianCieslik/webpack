@@ -1,16 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Contrail+One');
+
+
+:root{
+  --site--background:white;
+  --site-text:black;
+  --clock--background:black;
+  --navi--background:#ff5733;
+  --navi--color:black;
+  --dark--button--background:black;
+  --dark--button--color:white;
+  --clock--color:green;
+}
+.dark__mode{
+  --site--background:black;
+  --site-text:white;
+  --clock--background:white;
+  --navi--background:darkblue;
+  --navi--color:white;
+  --dark--button--background:white;
+  --dark--button--color:black;
+  --clock-color:yellow;
+
+}
+
+
 body {
-    background-color: #fefefe;
+    background-color: var(--site--background);
+    color:var(--site-text);
   }
   #clock {
     width: 600px;
     height:100px;
-    background-color:black;
+    background-color:var(--clock--background);
     border-radius:5px;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:green;
+    color:var(--clock--color);
     font-family: 'Times New Roman', Times, sans-seriff;
     font-size: 3em;
   }
@@ -18,7 +44,7 @@ body {
   .navigation {
     display: none;
     &__link {
-      color: #000000;
+      color: var(--navi--color);
       display: block;
       margin-bottom: 16px;
       &:hover {
@@ -31,7 +57,7 @@ body {
   }
   .navigation__open {
     display: block;
-    background-color: #ff5733;
+    background-color: var(--navi--background);
     padding: 16px;
     border-radius: 8px;
   }
@@ -44,6 +70,18 @@ body {
   }
   .main {
     margin: 10px auto 0;
+  }
+  .dark{
+    position:absolute;
+    top:16px;
+    right:125px;
+    width:50px;
+    height:60px;
+    background-color:var(--dark--button--background);
+    color:var(--dark--button--color);
+  }
+  .dark:hover {
+    background-color: yellow;
   }
   .menu {
     position: absolute;
